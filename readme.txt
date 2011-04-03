@@ -1,1 +1,1 @@
-You need a Bing API key to work this.
+You need a Bing API key to make this work.
