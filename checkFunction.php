@@ -92,7 +92,8 @@
 					$copyCount++;
 					echo "<td class='red'>FAIL [".'<a href="' . $viewUrl . '" target = "_blank">Bing</a>'.
 					"]</td><td>$explodeInput[$i]</td>";		
-			}				
+			}	
+			
 		
 		} // end MIN_WORDS and quotation check
 		else {   
