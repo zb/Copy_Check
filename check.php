@@ -14,10 +14,17 @@
 	define ("MIN_WORDS", 10);	
 
 	define ("MAX_WORDS", 22);
+<<<<<<< HEAD
 
 	define("API_KEY", "EA99040534216D7ACB9402357F9F65FA592BD780");
 
 
+=======
+	
+	define("API_KEY", "");
+	
+	
+>>>>>>> 55c242c65366507268f51fb76db6ba1340b9240b
 	error_reporting(E_ALL);
 	ini_set('display_errors','On');
 
