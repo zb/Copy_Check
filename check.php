@@ -14,17 +14,10 @@
 	define ("MIN_WORDS", 10);	
 
 	define ("MAX_WORDS", 22);
-<<<<<<< HEAD
 
 	define("API_KEY", "EA99040534216D7ACB9402357F9F65FA592BD780");
 
 
-=======
-	
-	define("API_KEY", "");
-	
-	
->>>>>>> 55c242c65366507268f51fb76db6ba1340b9240b
 	error_reporting(E_ALL);
 	ini_set('display_errors','On');
 
@@ -44,21 +37,11 @@
 	if(isset($_POST['uploadSubmit'])){ 
 
 	//$toBeChecked = $_POST['textInput'];	
-
-	// Where the file is going to be placed 
-	$target_path = "files/";
-
-	/* Add the original filename to our target path.  
-	Result is "uploads/filename.extension" */
-	$target_path = $target_path . basename( $_FILES['uploadedfile']['name']);
-
-	if(move_uploaded_file($_FILES['uploadedfile']['tmp_name'], $target_path)) {
-	    echo "The file ".  basename( $_FILES['uploadedfile']['name']). 
-	    " has been uploaded";
-	} else{
-	    echo "There was an error uploading the file, please try again!";
-	}
-
+		if ($_FILES['uploadedfile']['error'] == UPLOAD_ERR_OK               //checks for errors
+	    	&& is_uploaded_file($_FILES['uploadedfile']['tmp_name'])) { //checks that file is uploaded
+		
+	 		checkString(file_get_contents($_FILES['uploadedfile']['tmp_name'])); 	
+		}
 	}
 
 
