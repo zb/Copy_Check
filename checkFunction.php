@@ -29,7 +29,7 @@
 					
 				
 			// as string2
-				if (count(explode(" ", $explodeInput[$i])) > MAX_WORDS-1) {
+			if (count(explode(" ", $explodeInput[$i])) > MAX_WORDS-1) {
 					
 				$half = (int)ceil(count($sentence = str_word_count($explodeInput[$i], 1)) / 2); 
 				
@@ -38,12 +38,11 @@
 				$string4 = implode(' ', array_slice($sentence, $half));
 					
 				array_push($explodeInput, $string3);
-				$explodeInput[$i] = $string4;
-					
-				}
+				$explodeInput[$i] = $string4;					
+			}
 				
-				// as string3
-				if (count(explode(" ", $explodeInput[$i])) > MAX_WORDS-1) {
+			// as string4
+			if (count(explode(" ", $explodeInput[$i])) > MAX_WORDS-1) {
 					
 				$half = (int)ceil(count($sentence = str_word_count($explodeInput[$i], 1)) / 2); 
 					
@@ -52,9 +51,8 @@
 				$string5 = implode(' ', array_slice($sentence, $half));
 					
 				array_push($explodeInput, $string4);
-				$explodeInput[$i] = $string5;
-					
-				}
+				$explodeInput[$i] = $string5;					
+			}
 
 
 		} // End MAX_WORDS check	
@@ -83,20 +81,18 @@
 			$instanceCount = $result[0][0];		
 				
 	
-				if ($instanceCount == 0) {	 
+			if ($instanceCount == 0) {	 
 					
 					echo "<td class='green'>PASS [".'<a href="' . $viewUrl . '" target = "_blank">Bing</a>'.
 					"]</td><td>$explodeInput[$i]</td>";		
 					
-				}
-				if ($instanceCount > 0) {
+			}
+			if ($instanceCount > 0) {
 		
 					$copyCount++;
 					echo "<td class='red'>FAIL [".'<a href="' . $viewUrl . '" target = "_blank">Bing</a>'.
 					"]</td><td>$explodeInput[$i]</td>";		
-				}			
-		
-			
+			}				
 		
 		} // end MIN_WORDS and quotation check
 		else {   
