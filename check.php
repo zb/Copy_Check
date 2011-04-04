@@ -15,7 +15,7 @@
 
 	define ("MAX_WORDS", 22);
 
-	define("API_KEY", "EA99040534216D7ACB9402357F9F65FA592BD780");
+	define("API_KEY", "");
 
 
 	error_reporting(E_ALL);
