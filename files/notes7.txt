@@ -1,5 +1,0 @@
-xmlhttp=new XMLHttpRequest();
-
-http://www.w3schools.com/xml/xml_parser.asp
-
-http://www.w3schools.com/xml/xml_dom_advanced.asp
