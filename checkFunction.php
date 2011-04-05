@@ -110,7 +110,7 @@
 		
 		echo('<br /><b>All text within parameters appears to be entirely original.</b>');
 		
-	} // end if ($copyRatio < 0.2)
+	} // end if ($copyCount == 0) 
 	
 	if ($copyCount > 0) {
 		
