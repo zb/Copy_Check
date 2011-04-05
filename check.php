@@ -15,7 +15,7 @@
 
 	define ("MAX_WORDS", 22);
 
-	define("API_KEY", "");
+	define("API_KEY", "EA99040534216D7ACB9402357F9F65FA592BD780");
 
 
 	error_reporting(E_ALL);
@@ -28,21 +28,13 @@
 
 	checkString($toBeChecked);
 
-	echo('<p><a name="footnote">* segment is skipped if it contains fewer than <?php echo MIN_WORDS; ?> words.</a></p>
+	echo('<p><a name="footnote">* segment is skipped if it contains fewer than ' . MIN_WORDS . ' words.</a></p>
 	</body>
 	</html>');
 
 	}
 
-	if(isset($_POST['uploadSubmit'])){ 
 
-	//$toBeChecked = $_POST['textInput'];	
-		if ($_FILES['uploadedfile']['error'] == UPLOAD_ERR_OK               //checks for errors
-	    	&& is_uploaded_file($_FILES['uploadedfile']['tmp_name'])) { //checks that file is uploaded
-		
-	 		checkString(file_get_contents($_FILES['uploadedfile']['tmp_name'])); 	
-		}
-	}
 
 
 ?>

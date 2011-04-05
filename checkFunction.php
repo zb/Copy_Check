@@ -106,27 +106,27 @@
 	echo('<br />Suspicious found: ' . $copyCount );
 	echo('<br />String checked: ' . $stringCount );
 	
+	if ($copyCount == 0) {
+		
+		echo('<br /><b>All text within parameters appears to be entirely original.</b>');
+		
+	} // end if ($copyRatio < 0.2)
+	
 	if ($copyCount > 0) {
 		
 		$copyRatio = ($copyCount / $stringCount);
 		
-		printf("<br />Ratio: %.3f <br/>" , $copyRatio);
+		printf("<br />Ratio: %.3f <br/>" , $copyRatio);		
 		
 		if ($copyRatio < 0.2) {
 			
-			echo('A ratio below 0.2 will not be considered plagiarization at this point.');
+			echo('<b>Probably legit.</b>');
 			
 		} // end if ($copyRatio < 0.2) 
 		
 		if ($copyRatio >= 0.2) {
 	
-			echo('<br /><br />HYPOTHETICAL EMAIL - <br /><br />
-			
-			To: You.<br /><br />
-			
-			Subject: Plagiarization check. <br /><br />
-			
-			Body: The post entitled (TITLE - would be posted in Moodle) has been found suspect. A check for the originality(or lack thereof) is required.');
+			echo('<b>Someone may need a lesson in ethics.</b>');
 			
 		} // end if ($copyRatio >= 0.2) 
 		
